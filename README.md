@@ -2,7 +2,7 @@
 
 ## To Get started
 
-### `git clone https://github.com/EmilioAsteben/React-swiper-demo.git`
+### `git clone https://github.com/EmilioAsteben/MBA-programs.git`
 
 
 ### `npm install`
