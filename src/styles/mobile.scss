@@ -1,0 +1,142 @@
+@mixin mobile-375px($base-color) {
+
+    @media (max-width: 375px) {
+
+        .container {
+            margin: 0 15px;
+            padding-top: 40px;
+            align-items: start;
+            
+
+            h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+                text-align: left;
+            }
+        }
+
+        .modules {
+            flex-direction: column;
+        }
+
+        .program {
+            width: auto;
+
+            h3 {
+                font-size: 22px;
+                max-width: 300px;
+            }
+        }
+
+        .program_module {
+            flex-direction: column;
+
+            &:first-child {
+                margin-right: 0;
+            }
+        }
+
+
+        .program_module_title {
+
+
+            height: 51px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background: #F7F7F7;
+            border: none;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+            &::before {
+                content: "";
+                display: block;
+                background: url("./icons/plus.png") no-repeat;
+                width: 20px;
+                height: 20px;
+                float: left;
+                margin: 0 25px 0 20px;
+            }
+
+            &.open {
+                background-color: $base-color;
+                color: #fff;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    background: url("./icons/minus.png") no-repeat;
+                    background-position-y: bottom 10px;
+                    width: 20px;
+                    height: 20px;
+                    float: left;
+                    margin: 0 25px 0 20px;
+                }
+
+
+            }
+
+            h4 {
+                font-size: 20px;
+            }
+        }
+
+
+
+        .rectangles {
+            flex-direction: column;
+            margin-bottom: 50px;
+
+
+            .rectangle {
+
+                padding-left: 35px;
+                flex-basis: auto;
+                height: auto;
+                padding-bottom: 30px;
+
+
+                h4 {
+                    font-size: 25px;
+                }
+
+                p {
+                    width: auto;
+                    padding-right: 10px;
+                }
+
+                ul {
+                    width: auto;
+                }
+
+
+                &.red {
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                }
+
+             
+            }
+
+
+
+        }
+
+        
+
+        .subjects_list {
+            width: auto;
+            max-height: 0;
+            overflow: hidden;
+            transition: padding 0.5s, max-height 0.5s;
+
+
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+@import './mobile.scss';
+
+$base-color: #FF3535;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;
+    min-height: 500px;
+    margin: 0 auto;
+    padding-top: 70px;
+    margin-bottom: 150px;
+
+
+    h2 {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 100px;
+
+    }
+
+}
+
+.programs {
+    margin-bottom: 70px;
+}
+
+.program {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    width: max-content;
+
+    h3 {
+        font-size: 26px;
+        margin-bottom: 50px;
+        width: max-content;
+        align-self: start;
+    }
+}
+
+.program_module {
+    display: flex;
+
+    &:first-child {
+        margin-right: 80px;
+    }
+
+
+}
+
+.program_module_title {
+    border-top: 2px solid $base-color;
+    flex-shrink: 0;
+    margin-right: 30px;
+
+    h4 {
+        font-size: 24px;
+        font-weight: 300;
+    }
+}
+
+.modules {
+    display: flex;
+
+
+    li {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+}
+
+.rectangles {
+    display: flex;
+    justify-content: center;
+
+    .rectangle {
+        flex-basis: 600px;
+        height: 290px;
+        flex-shrink: 0;
+        padding-left: 95px;
+        padding-top: 55px;
+        box-sizing: border-box;
+        color: #fff;
+
+        &.red {
+            background-color: $base-color;
+            margin-right: 30px;
+        }
+
+        &.dark {
+            background-color: #2D2C2A;
+        }
+
+        h4 {
+            margin-top: 0;
+            // text-align: center;
+            font-size: 35px;
+            margin-bottom: 30px;
+
+        }
+
+        ul {
+            margin: 0 auto;
+            width: 470px;
+            padding: 0;
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+
+        li,
+        p {
+            font-size: 20px;
+        }
+
+        p {
+            width: 375px;
+            // margin: 0 auto;
+        }
+
+
+
+
+
+
+    }
+}
+
+
+ul {
+    width: 373px;
+    list-style: none;
+}
+
+ul li::before {
+    content: "\2022";
+    color: $base-color;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+
+
+@include mobile-375px($base-color: $base-color);
